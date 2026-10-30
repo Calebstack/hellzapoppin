@@ -167,6 +167,18 @@ const pageFooter = document.querySelector("#footer-placeholder");
 if (pageHeader) pageHeader.innerHTML = headerMarkup;
 if (pageFooter) pageFooter.innerHTML = footerMarkup;
 
+const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+const currentPagePath = currentPath === "/" ? "/index.html" : currentPath;
+document.querySelectorAll(".site-nav a[href], .footer-nav a[href]").forEach((link) => {
+  const destination = new URL(link.href, window.location.href);
+  const destinationPath = destination.pathname.replace(/\/+$/, "") || "/";
+  if (destination.origin !== window.location.origin || destinationPath !== currentPagePath) return;
+
+  link.setAttribute("aria-current", "page");
+  const group = link.closest(".nav-group");
+  if (group) group.classList.add("is-current");
+});
+
 if (performerId && performers[performerId]) {
   const performer = performers[performerId];
   const title = document.querySelector("[data-performer-name]");
@@ -443,6 +455,10 @@ if (menuToggle && siteNavigation) {
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const siteHeader = document.querySelector(".site-header");
 const mainContent = document.querySelector("main");
+
+if (prefersReducedMotion) {
+  document.querySelectorAll("video[autoplay]").forEach((video) => video.pause());
+}
 
 if (!prefersReducedMotion && Element.prototype.animate) {
   if (siteHeader) {

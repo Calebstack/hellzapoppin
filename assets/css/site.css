@@ -116,7 +116,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-
   text-transform: uppercase;
 }
 .site-nav > a:hover, .nav-group__toggle:hover, .nav-group__menu a:hover { color: white; }
-.site-nav__home { color: var(--red-bright) !important; }
+.site-nav > a[aria-current="page"], .nav-group.is-current > .nav-group__toggle { color: var(--red-bright) !important; }
 .nav-group { position: relative; }
 .nav-group__toggle {
   display: inline-flex;
@@ -150,6 +150,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-
   text-decoration: none;
   text-transform: uppercase;
 }
+.nav-group__menu a[aria-current="page"] { color: var(--gold); }
 .nav-group__menu a:last-child { border-bottom: 0; }
 .site-nav__trading { color: var(--gold) !important; }
 .menu-toggle { display: none; }
@@ -384,6 +385,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-
 .footer-contact address a:hover { color: var(--gold); }
 .footer-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-items: center; gap: 11px 20px; width: 100%; }
 .footer-nav a { color: #aaa69f; font-size: 8px; font-weight: 600; letter-spacing: .09em; text-decoration: none; text-transform: uppercase; }
+.footer-nav a[aria-current="page"] { color: var(--gold); }
 .footer-nav a:hover { color: var(--gold); }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); color: #77736c; font-size: 7px; letter-spacing: .1em; text-align: center; }
 

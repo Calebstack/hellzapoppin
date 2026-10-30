@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Hellzapoppin's tour history, from recent performances to shows across the years.">
+  <title>Tour History | Hellzapoppin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/tour-history-data.js" defer></script>
+  <script src="assets/js/tour-history.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-width page-hero__inner">
+        <div class="breadcrumbs"><a href="index.html">HOME</a> / TOUR HISTORY</div>
+        <p class="eyebrow">The road goes on</p>
+        <h1 class="display">Tour History</h1>
+        <p class="page-hero__copy">Every town, every tent, every unforgettable night under the lights.</p>
+      </div>
+    </section>
+
+    <section class="section tour-history-section">
+      <div class="page-width">
+        <figure class="tour-history-banner">
+          <img src="assets/images/tour-history-banner.jpg" alt="Hellzapoppin circus banners lined up beneath the big top">
+        </figure>
+        <div class="tour-history-intro">
+          <p class="eyebrow">A life on the road</p>
+          <h2>Years of shows. Countless stories.</h2>
+          <p>Browse the complete tour archive by year, or search for a city, venue, or date.</p>
+          <p class="tour-history-source">For the latest announcements, visit the <a href="https://hellzapoppin.com/tour-dates%2Ftickets" target="_blank" rel="noopener noreferrer">official tour schedule <span aria-hidden="true">↗</span></a>.</p>
+        </div>
+
+        <div class="tour-history-controls">
+          <label>
+            <span>Search the archive</span>
+            <input id="history-search" type="search" placeholder="Try a city, venue, or date" autocomplete="off">
+          </label>
+          <label>
+            <span>Filter by year</span>
+            <select id="history-year-filter">
+              <option value="">All years</option>
+            </select>
+          </label>
+        </div>
+        <p id="history-results" class="history-results" role="status" aria-live="polite"></p>
+        <div id="tour-history-list" class="history-list"></div>
+      </div>
+    </section>
+
+    <section class="section tour-history-cta">
+      <div class="page-width">
+        <p class="eyebrow">Bring the spectacle to your city</p>
+        <h2 class="display">THE NEXT STOP COULD BE <em>YOURS.</em></h2>
+        <a class="button" href="contact.html">BOOK HELLZAPOPPIN <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Watch Hellzapoppin's circus performances, music videos, and television appearances.">
+  <title>Videos | Hellzapoppin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/videos-data.js" defer></script>
+  <script src="assets/js/videos.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main id="main">
+    <section class="video-hero" aria-labelledby="video-hero-title">
+      <video class="video-hero__media" autoplay muted loop playsinline preload="metadata" poster="assets/images/video-hellzapoppin-demo.jpg" aria-hidden="true">
+        <source src="assets/videos/media.mp4" type="video/mp4">
+      </video>
+      <div class="video-hero__shade" aria-hidden="true"></div>
+      <div class="page-width video-hero__content">
+        <div class="breadcrumbs"><a href="index.html">HOME</a> / MEDIA / VIDEOS</div>
+        <p class="eyebrow">The spectacle in motion</p>
+        <h1 class="display" id="video-hero-title">WATCH THE <em>SHOW.</em></h1>
+        <p class="video-hero__copy">From the big top to the screen: Hellzapoppin performances, music videos, and television appearances.</p>
+        <a class="button" href="#video-library">EXPLORE THE VIDEO ARCHIVE <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="section video-library" id="video-library" aria-labelledby="video-library-title">
+      <div class="page-width">
+        <div class="eyebrow">Hellzapoppin on camera</div>
+        <h2 class="display section__heading" id="video-library-title">FROM THE STAGE<br>TO THE <em>SCREEN.</em></h2>
+        <div class="prose">
+          <p>Revisit official performance reels, music videos, and television appearances featuring Hellzapoppin and its performers. Select a preview to watch it on its original channel.</p>
+        </div>
+        <p class="video-count" id="video-count" role="status" aria-live="polite"></p>
+        <div class="video-grid" id="video-grid"></div>
+        <p class="video-channel-link"><a class="button" href="https://www.youtube.com/@Hellzapoppin/videos" target="_blank" rel="noopener noreferrer">VISIT THE HELLZAPOPPIN YOUTUBE CHANNEL <span>↗</span></a></p>
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>
